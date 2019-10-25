@@ -1,2 +1,2 @@
-# Blinky con freeRTOS y sAPI. 
+# Trabajo Práctico 2 - RTOS II - 2019. 
 
