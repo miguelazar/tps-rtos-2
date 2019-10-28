@@ -12,7 +12,7 @@
 #include <string.h>
 //#include "stringManipulation.h"
 #include "board.h"
-#include "driver.h"
+#include "driver2.h"
 #include "oa.h"
 
 // Includes de FreeRTOS
@@ -23,5 +23,5 @@
 #include "queue.h"
 
 
-#define MAYUSCULIZAR_FUNC_ID		1
-#define MINUSCULIZAR_FUNC_ID		2
+#define MAYUSCULIZAR_FUNC_ID		49 //cooresponde a 1 en ASCII
+#define MINUSCULIZAR_FUNC_ID		50 //cooresponde a 2 en ASCII

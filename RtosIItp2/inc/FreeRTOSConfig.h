@@ -76,6 +76,8 @@ extern int DbgConsole_Printf( const char *fmt_s, ... );
 #define configOVERRIDE_DEFAULT_TICK_CONFIGURATION    1
 #define configRECORD_STACK_HIGH_ADDRESS              1
 
+//#define configAPPLICATION_ALLOCATED_HEAP			4
+
 // Add old API compatibility
 #define configENABLE_BACKWARD_COMPATIBILITY          1
 

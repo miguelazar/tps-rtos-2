@@ -1,5 +1,5 @@
 /*
- * driver.h
+ * driver2.h
  *
  *  Created on: Jun 14, 2019
  *      Author: nacho
@@ -8,8 +8,8 @@
  *      POR ESO SE PUEDE USAR EL HEAP1. EN CASO DE REQUERIRSE USAR MALLOC EN LA PLICACION SUPERIOR SE PUEDE USAR HEAP4
  */
 
-#ifndef _DRIVER_H_
-#define _DRIVER_H_
+#ifndef _DRIVER2_H_
+#define _DRIVER2_H_
 
 /*==================[inclusions]=============================================*/
 
@@ -94,4 +94,4 @@ bool_t DriverReceive(driver_t* driver_actual,dataStruct_t * data);
 #endif
 
 /*==================[end of file]============================================*/
-#endif /* _DRIVER_H_ */
+#endif /* _DRIVER2_H_ */

@@ -4,8 +4,8 @@
  *  Created on: Jun 14, 2019
  *      Author: nacho
  *
- *      ESTE DRIVER INCLUYE EL USO DE UN POOL DE MOMORIA. POR LO TANTO NOS E USA EL MALLOC DE FREERTOS
- *      POR ESO SE PUEDE USAR EL HEAP1. EN CASO DE REQUERIRSE USAR MALLOC EN LA PLICACION SUPERIOR SE PUEDE USAR HEAP4
+ *       ESTE OBJETO ACTIVO UTILIZA EL FRAMEWORK DE FREERTOS. EL MISMO UTILIZA MEMORIA DINAMICA DE FREERTOS.
+ *       SE SUGIERE LA UTILIZACION DE HEAP4.
  */
 
 #ifndef _OA_H_
@@ -19,6 +19,7 @@
 #include <string.h>
 //#include "stringManipulation.h"
 #include "board.h"
+#include "driver2.h"
 
 
 // Includes de FreeRTOS
@@ -32,7 +33,6 @@
 // QM Pool
 #include "qmpool.h"
 
-#include "driver.h"
 
 
 /*==================[cplusplus]==============================================*/
@@ -54,6 +54,7 @@ typedef struct
 	Function_t oa_function;
 	QueueHandle_t queue_events; //Cola de eventos de entrada
 	TaskHandle_t my_handler; //handler de la tarea
+	driver_t * out_driver; //referencia al driver para enviar mensaje de salida
 } oa_t;
 
 /*==================[external data declaration]==============================*/
@@ -64,7 +65,7 @@ typedef struct
 bool_t OAConfigFunction(oa_t* oa_actual,Function_t function);
 
 // Function que inicializa el OA
-bool_t OAInitialize(oa_t* oa_actual,Function_t function);
+oa_t* OAInitialize(Function_t function, driver_t * my_driver);
 
 // Function que destruye el OA
 bool_t OADestructor(oa_t* oa_actual);

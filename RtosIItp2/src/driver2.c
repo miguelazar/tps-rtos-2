@@ -1,5 +1,5 @@
 /*
- * driver.c
+ * driver2.c
  *
  *  Created on: Jun 14, 2019
  *      Author: nacho
@@ -11,7 +11,8 @@
 
 /*==================[inclusions]=============================================*/
 
-#include "../inc/driver.h"       // <= own header
+#include "driver2.h"       // <= own header
+//#include "../inc/driver2.h"       // <= own header
 #include "sapi.h"         // <= sAPI header
 
 
